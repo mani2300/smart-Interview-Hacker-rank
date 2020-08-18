@@ -1,0 +1,37 @@
+#Print Hollow Diamond Pattern
+
+t=int(input())
+for i in range(t):
+    a=int(input())
+    print("Case #{}:".format(i+1))
+    for i in range(a):
+        for j in range(a):
+            if (j+i==a//2 or i+j==a-1+(a//2) or j==i+(a//2) or i==j+(a//2)) :
+                print("*",end='')
+            else:
+                print(" ",end='')
+            
+        print()
+        
+        
+input:        
+        
+15
+output:
+
+
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *

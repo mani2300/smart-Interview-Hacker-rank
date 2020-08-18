@@ -1,0 +1,30 @@
+#Largest Concatenated Number
+
+
+
+def ln(n):
+    e,ans=[],""
+    l=len(str(max(n)))+1
+    for i in n:
+        temp=str(i)*l
+        e.append((temp[:l:],i))
+    e.sort(reverse=True)
+    for i in e:
+        ans+=str(i[1])
+    if int(ans)==0:
+        return 0
+    return ans
+a=int(input())
+for i in range(a):
+    x=int(input())
+    ar=list(map(int,input().split()))
+    print(ln(ar))
+    
+''''   
+input:
+49 73 58 30 72 44 78 23 
+
+
+output:
+7873725849443023
+''''

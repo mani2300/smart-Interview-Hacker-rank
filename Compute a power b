@@ -1,0 +1,14 @@
+#Compute a power b
+
+
+def p(x,y):
+    if y==0: return 1
+    t=p(x,int(y/2))
+    if (y%2==0):
+        return (t*t)%1000000007
+    else:
+        return (x*t*t)%1000000007
+a=int(input())
+for i in range(a):
+    x,y=map(int,input().split())
+    print(p(x,y)%1000000007)

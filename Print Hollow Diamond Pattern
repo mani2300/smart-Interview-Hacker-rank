@@ -13,7 +13,7 @@ for i in range(t):
             
         print()
         
-        
+''''    
 input:        
         
 15
@@ -35,3 +35,4 @@ output:
      *   *
       * *
        *
+''''

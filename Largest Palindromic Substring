@@ -1,0 +1,34 @@
+#Largest Palindromic Substring
+
+def palin(ar):
+    x=[]
+    for i in range(len(ar)):
+        p1=i
+        p2=i
+        s=0
+        m=0
+        while(p1>=0 and p2<len(ar)):
+            if ar[p1]==ar[p2]:
+                p1-=1
+                p2+=1
+                s=(p2-p1)-1
+            else:
+                break
+        p1=i
+        p2=p1+1
+        while(p1>=0 and p2<len(ar)):
+            if ar[p1]==ar[p2]:
+                p1-=1
+                p2+=1
+                m=(p2-p1)-1
+            else:
+                break
+        l=max(s,m)
+        x.append(l)
+    return max(x)
+a=int(input())
+for i in range(a):
+    n=int(input())
+    ar=input()
+    print(palin(ar))
+    
